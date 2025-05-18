@@ -1,0 +1,98 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Ensure Tailwind is imported properly */
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+.font-heading {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.hover-translate {
+  transition: all 0.3s ease;
+}
+
+.hover-translate:hover {
+  transform: translateY(-5px);
+}
+
+.scale-in-center {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.bg-gradient-red {
+  background: linear-gradient(90deg, #dc2626 0%, #7f1d1d 100%);
+}
+
+.bg-gradient-red-light {
+  background: linear-gradient(90deg, #ef4444 0%, #b91c1c 100%);
+}
+
+.nav-link-underline::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+  margin-top: 3px;
+}
+
+.nav-link-underline:hover::after {
+  width: 100%;
+}
+
